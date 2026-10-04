@@ -42,7 +42,8 @@ fixed list of apps: always look them up there. The GitHub account and publishing
 
 Ask only what you cannot detect yourself. Detect the OS and installed tools by running commands
 (`git --version`, `gh --version`, `node --version`, `python3 --version`, `uv --version`); do not ask the
-user to check them.
+user to check them. On Windows, check Python with `py --version` or `python --version` instead:
+`python3` there is often only a shortcut that opens the Microsoft Store.
 
 Ask, in one short message:
 
@@ -99,7 +100,7 @@ starting point works. Find the app's kind and its start command as described in
 python3 -m http.server 8000
 ```
 
-then open http://localhost:8000/ in the browser. (Opening `index.html` by double-click often works too,
+(on Windows: `py -m http.server 8000`, or `python -m http.server 8000`), then open http://localhost:8000/ in the browser. (Opening `index.html` by double-click often works too,
 but some features such as the offline cache need the local server.) Stop the server with Ctrl+C when done.
 
 ## Step 4. Make it theirs: decide the changes

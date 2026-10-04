@@ -42,6 +42,8 @@ Copy the `skills/remix-app` folder to:
 | Claude Code | `~/.claude/skills/remix-app/` (`~` is your home folder) |
 | Codex | `~/.codex/skills/remix-app/` |
 
+On Windows, `~` is `C:\Users\<your user name>`, so for Claude Code the destination is `C:\Users\<your user name>\.claude\skills\remix-app\`. Folders whose names start with `.` may be hidden; in File Explorer, turn on **View** → **Show** → **Hidden items**, or create the folder if it does not exist.
+
 If you're not sure how, ask the AI in step 3:
 
 > Install skills/remix-app from this folder (where I unzipped it) as a skill you can use.

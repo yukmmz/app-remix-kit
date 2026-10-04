@@ -22,7 +22,7 @@ Decide from the files at the top of the repository:
 
 | Files present | Kind | Run locally | Publish |
 |---|---|---|---|
-| `index.html`, no `package.json` | Static HTML/JS (most apps) | `python3 -m http.server 8000`, open http://localhost:8000/ | GitHub Pages from `main` / `/ (root)` |
+| `index.html`, no `package.json` | Static HTML/JS (most apps) | `python3 -m http.server 8000` (Windows: `py -m http.server 8000`), open http://localhost:8000/ | GitHub Pages from `main` / `/ (root)` |
 | `package.json` with a `build` script (e.g. Vite) | Needs a build | `npm install`, then the `dev` script | Whatever `package.json` says: a `deploy` script (e.g. `gh-pages -d dist` → Pages from the `gh-pages` branch), or a GitHub Actions workflow in `.github/workflows/` |
 | `pyproject.toml` / `*.py`, no `index.html` | Desktop program (Python) | the command in the README (typically `uv run python <file>.py`) | No web page; publishing = pushing the repository so others can download it |
 
@@ -43,6 +43,14 @@ Search the whole project (excluding `node_modules/` and `dist/`):
 ```
 grep -rn --exclude-dir=node_modules --exclude-dir=dist -e "yukmmz" -e "script.google.com" -e "FEEDBACK_URL" .
 ```
+
+In Windows PowerShell, where `grep` is not available:
+
+```
+Get-ChildItem -Recurse -File | Where-Object { $_.FullName -notmatch '\\(node_modules|dist|\.git)\\' } | Select-String -Pattern 'yukmmz','script\.google\.com','FEEDBACK_URL'
+```
+
+If your own file-search tool can do the same search, using it is fine too.
 
 What you will typically find, and what to do:
 
