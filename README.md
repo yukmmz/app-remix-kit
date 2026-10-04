@@ -5,7 +5,7 @@
 A kit for turning the small apps at [yukmmz.github.io](https://yukmmz.github.io/) into **your own version with the help of an AI agent, and publishing it at your own URL**.
 It is meant for people who have never used programming, GitHub, or AI agents such as Claude Code or Codex.
 
-The apps are deliberately simple. Feel free to copy them, change them with AI, and make them your own (MIT License).
+The apps are simple. Feel free to copy them, change them with AI, and make them your own (MIT License).
 
 ## What's inside
 
